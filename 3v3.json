@@ -1,0 +1,231 @@
+{
+    "last_announcement_id": 0,
+    "show_announcements": true,
+    "current_theme": "Custom",
+    "enable_analytics": true,
+    "user_name": "User",
+    "pid_bot_modes": {},
+    "pid_kickoff_enabled": {
+        "2560": false
+    },
+    "pid_ballcam_enabled": {
+        "9340": true,
+        "2560": true,
+        "7284": true
+    },
+    "pid_demo_enabled": {},
+    "admin_warning_shown": true,
+    "bot_builder": {
+        "active_profile": "nexpy 3s",
+        "profiles": {
+            "None": {
+                "description": "Default profile: Nexto for kickoff, Vortex for gameplay.",
+                "rules": [
+                    {
+                        "id": "default",
+                        "enabled": true,
+                        "condition": {
+                            "type": "default"
+                        },
+                        "bot": "vortex",
+                        "priority": 1
+                    }
+                ]
+            },
+            "nexpy 3s": {
+                "description": "Custom profile: nexpy 3s",
+                "rules": [
+                    {
+                        "id": "rule_1773428572",
+                        "enabled": true,
+                        "condition": {
+                            "type": "and",
+                            "conditions": [
+                                {
+                                    "type": "kickoff"
+                                },
+                                {
+                                    "type": "is_first_man"
+                                }
+                            ]
+                        },
+                        "guards": [
+                            {
+                                "type": "kickoff"
+                            }
+                        ],
+                        "bot": "vortex",
+                        "cooldown": 0.0,
+                        "priority": 1
+                    },
+                    {
+                        "id": "rule_1774117989",
+                        "enabled": true,
+                        "condition": {
+                            "type": "and",
+                            "conditions": [
+                                {
+                                    "type": "is_third_man"
+                                },
+                                {
+                                    "type": "ball_in_own_half"
+                                }
+                            ]
+                        },
+                        "guards": [
+                            {
+                                "type": "ball_in_own_half"
+                            },
+                            {
+                                "type": "on_ground"
+                            }
+                        ],
+                        "bot": "ice_poseidon",
+                        "cooldown": 0.0,
+                        "priority": 2
+                    },
+                    {
+                        "id": "rule_1774118021",
+                        "enabled": true,
+                        "condition": {
+                            "type": "and",
+                            "conditions": [
+                                {
+                                    "type": "is_third_man"
+                                },
+                                {
+                                    "type": "in_enemy_half"
+                                }
+                            ]
+                        },
+                        "guards": [
+                            {
+                                "type": "is_third_man"
+                            }
+                        ],
+                        "bot": "nexto",
+                        "cooldown": 0.0,
+                        "priority": 3
+                    },
+                    {
+                        "id": "rule_1774118084",
+                        "enabled": true,
+                        "condition": {
+                            "type": "and",
+                            "conditions": [
+                                {
+                                    "type": "is_first_man"
+                                },
+                                {
+                                    "type": "in_enemy_half"
+                                }
+                            ]
+                        },
+                        "guards": [
+                            {
+                                "type": "in_enemy_half"
+                            },
+                            {
+                                "type": "is_first_man"
+                            }
+                        ],
+                        "bot": "vortex",
+                        "cooldown": 0.0,
+                        "priority": 4
+                    },
+                    {
+                        "id": "rule_1774118109",
+                        "enabled": true,
+                        "condition": {
+                            "type": "is_second_man"
+                        },
+                        "guards": [
+                            {
+                                "type": "is_second_man"
+                            }
+                        ],
+                        "bot": "nexto",
+                        "cooldown": 0.0,
+                        "priority": 5
+                    },
+                    {
+                        "id": "rule_1774118122",
+                        "enabled": true,
+                        "condition": {
+                            "type": "default"
+                        },
+                        "guards": [],
+                        "bot": "nexto",
+                        "cooldown": 0.0,
+                        "priority": 6
+                    }
+                ]
+            }
+        },
+        "enabled": true,
+        "demo_override": true
+    },
+    "humanizer_settings": {
+        "nexto": {
+            "enabled": false,
+            "noise_amount": 0.0,
+            "smoothing": 0.0,
+            "varied_hold_times": false,
+            "hold_time_delay": 0.0,
+            "variable_tick_rate": false,
+            "tick_rate_value": 0
+        },
+        "vortex": {
+            "enabled": false,
+            "noise_amount": 0.0,
+            "smoothing": 10.0,
+            "varied_hold_times": false,
+            "hold_time_delay": 0.0,
+            "variable_tick_rate": true,
+            "tick_rate_value": 3.0
+        },
+        "ice_poseidon": {
+            "enabled": false,
+            "noise_amount": 0.0,
+            "smoothing": 0.0,
+            "varied_hold_times": false,
+            "hold_time_delay": 0.0,
+            "variable_tick_rate": true,
+            "tick_rate_value": 0
+        },
+        "demo": {
+            "enabled": false,
+            "noise_amount": 0.0,
+            "smoothing": 0.0,
+            "varied_hold_times": false,
+            "hold_time_delay": 0.0,
+            "variable_tick_rate": false,
+            "tick_rate_value": 0
+        }
+    },
+    "custom_theme_colors": {
+        "BG": "#050505",
+        "SIDEBAR": "#0A0A0A",
+        "MAIN_CONTENT": "#050505",
+        "CARD": "#111111",
+        "CARD_HOVER": "#1A1A1A",
+        "CARD_BORDER": "#e83554",
+        "CARD_BORDER_HOVER": "#ff3f64",
+        "ACCENT": "#e83554",
+        "ACCENT_HOVER": "#b92a43",
+        "TEXT": "#FFFFFF",
+        "TEXT_SECONDARY": "#B0B0B0",
+        "LINK": "#ff446d",
+        "GREEN": "#27AE60",
+        "DARK_GREEN": "#1B8246",
+        "YELLOW": "#F1C40F",
+        "IDLE": "#00BFFF",
+        "STOP": "#C0392B",
+        "STOP_HOVER": "#A93226",
+        "TEXT_ON_ACCENT": "#FFFFFF"
+    },
+    "pid_bot_versions": {
+        "2596": "legacy_62",
+        "13548": "legacy_62"
+    }
+}
